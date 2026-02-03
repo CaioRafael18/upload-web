@@ -31,7 +31,9 @@ jobs:
 
       - name: Install dependencies
         id: install-dependencies
-        run: pnpm install
+        run: |
+          pnpm install
+          pnpm run build
       
       - name: Configure AWS credentials
         id: configure-aws-credentials
